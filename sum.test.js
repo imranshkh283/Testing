@@ -15,3 +15,9 @@ test('object test value', () => {
 
     expect(data).toEqual({ name: 'Imran', age: 24, address: 'bandra east' });
 })
+
+test('null falsy test', () => {
+    const n = null;
+
+    expect(n).toBeFalsy();
+})
