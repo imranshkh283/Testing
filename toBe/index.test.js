@@ -15,5 +15,8 @@ describe('test object property', () => {
     test('rewrite as ', () => {
         expect(Object.keys(data)).toContain('name')
         expect(Object.is(data.name, 'javascript test')).toBe(true)
+        expect(Object.is(data.name, 'javascript test1')).not.toBe(true)
+        expect(Object.is(data.name, 'javascript test1')).toBe(false)
+
     })
 })
