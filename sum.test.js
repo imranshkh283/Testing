@@ -1,7 +1,7 @@
 const sum = require('./sum');
 const data = require('./object');
 const falsy = require('./falsy');
-
+const _undefined = require('./_undefined');
 test(' sum of two number', () => {
     expect(sum(1, 2)).toBe(3);
 })
@@ -16,5 +16,9 @@ test('object test value', () => {
 
 test('null falsy test', () => {
     expect(falsy).toBeNull();
+})
+
+test('undefined test', () => {
+    expect(_undefined).toBeUndefined();
 })
 
