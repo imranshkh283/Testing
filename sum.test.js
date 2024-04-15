@@ -3,6 +3,7 @@ const data = require('./object');
 const falsy = require('./falsy');
 const _undefined = require('./_undefined');
 const checkObject = require('./_throwError');
+const fetchData = require('./_asyncFunc')
 
 test(' sum of two number', () => {
     expect(sum(1, 2)).toBe(3);
@@ -30,3 +31,19 @@ test('Throw new err', () => {
     }).toThrow()
 })
 
+// test('Async test', done => {
+//     function callback(data) {
+//         try {
+//             expect(data).toBe('pizza');
+//             done();
+//         } catch (error) {
+//             done(error);
+//         }
+//     }
+
+//     fetchData(callback);
+// })
+
+test('Async test with Promise', () => {
+    return expect(fetchData()).resolves.toBe('computer');
+});
